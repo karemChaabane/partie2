@@ -1,0 +1,197 @@
+/* Palette de couleurs modernes */
+:root {
+    --primary-color: #582b27; /* Rouge corail moderne */
+    --secondary-color: #e63946; /* Rouge foncé */
+    --background-color: #f8f9fa; /* Blanc cassé */
+    --card-color: #ffffff; /* Blanc classique */
+    --text-color: #343a40; /* Gris foncé pour le texte */
+    --border-color: #dee2e6; /* Gris clair pour les bordures */
+    --button-hover: #ff5a4d; /* Rouge intense pour hover */
+    --error-color: #e63946; /* Rouge vif */
+    --link-color: #007bff; /* Bleu moderne */
+    --link-hover: #0056b3; /* Bleu foncé */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background: var(--card-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 40px var(--shadow-color);
+}
+
+/* Titre principal */
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Style du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    border: 3px solid var(--border-color); /* Bordure autour du tableau */
+    border-radius: 8px; /* Bordure arrondie autour du tableau */
+}
+
+/* Bordure et style des cellules */
+table th, table td {
+    padding: 15px 20px;
+    text-align: left;
+    border: 2px solid var(--border-color); /* Bordure pour chaque cellule */
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Style des en-têtes de tableau */
+table th {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Style des cellules de données */
+table td {
+    background-color: var(--card-color);
+    color: var(--text-color);
+}
+
+/* Style pour les lignes paires du tableau */
+table tr:nth-child(even) td {
+    background-color: #f9f9f9; /* Ligne paire avec fond gris clair */
+}
+
+/* Survol des lignes du tableau */
+table tr:hover {
+    background-color: var(--secondary-color); /* Changer la couleur du fond lors du survol */
+    color: #fff; /* Texte en blanc lors du survol */
+}
+
+/* Style des liens dans le tableau */
+table a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table a:hover {
+    color: var(--link-hover);
+}
+
+/* Style des actions de modification et suppression */
+table td a {
+    padding: 7px 12px;
+    margin: 0 5px;
+    background-color: var(--link-color);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+}
+
+table td a:hover {
+    background-color: var(--link-hover);
+    transform: scale(1.05);
+}
+
+table td a:active {
+    background-color: var(--secondary-color);
+}
+
+/* Liens */
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Style pour le formulaire d'ajout et de modification */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+/* Champs du formulaire */
+input[type="text"], input[type="email"], input[type="number"], select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: var(--text-color);
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Boutons du formulaire */
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Style pour le bouton "Ajouter" */
+button.add {
+    background-color: var(--link-color);
+    transition: background-color 0.3s;
+}
+
+button.add:hover {
+    background-color: var(--link-hover);
+}
+
+/* Style pour les erreurs de formulaire */
+.error {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+}
